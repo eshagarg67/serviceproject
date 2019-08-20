@@ -1,0 +1,17 @@
+<h1>
+  department-list
+</h1>
+<div id="container">
+  <ul class="items">
+    <li *ngFor="let department of departments">
+      <span class="badge">{{department.id}}</span>
+      <!-- [routerLink]="['detail',department.id]" -->
+      <a href="javascript:void(0)" (click)="onClick(department.id)"> {{department.name}} </a>
+    </li>
+
+  </ul>
+
+  <div style="background: #eee; width:500px; height:500px; float: left;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
